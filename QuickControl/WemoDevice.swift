@@ -10,33 +10,31 @@ import Foundation
 
 extension BasicUPnPDevice {
     func changeState(state: Int){
-        if (modelDescription == "Belkin Insight 1.0"){
-            var services = NSArray(array: self.getServices().allValues)
-            for service in services {
-                var serviceUpnp = service as BasicUPnPService
-                service.process()
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            if (self.modelDescription == "Belkin Insight 1.0"){
+                var services = NSArray(array: self.services.allValues)
+                var basicService = services.objectAtIndex(0) as BasicUPnPService
+                if (!basicService.isProcessed) {
+                    basicService.process
+                }
+
+                var parameters = OrderedDictionary(object: state, forKey: "BinaryState");
+                var results = NSMutableDictionary()
+                sleep(1);
+                var ret = basicService.soap.action("SetBinaryState", parameters: parameters, returnValues: results);
+            } else if (self.modelDescription == "Belkin WeMo Bridge for Zigbee bulbs"){
+                var services = NSArray(array: self.services.allValues)
+                var basicService = services.objectAtIndex(8) as BasicUPnPService
+                if (!basicService.isProcessed) {
+                    basicService.process
+                }
+                
+                var body = NSString(format: "&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DeviceStatus&gt;&lt;IsGroupAction&gt;NO&lt;/IsGroupAction&gt;&lt;DeviceID available=&quot;YES&quot;&gt;B4750E1B957846E4&lt;/DeviceID&gt;&lt;CapabilityID&gt;10006&lt;/CapabilityID&gt;&lt;CapabilityValue&gt;%d&lt;/CapabilityValue&gt;&lt;/DeviceStatus&gt;&lt;DeviceStatus&gt;&lt;IsGroupAction&gt;NO&lt;/IsGroupAction&gt;&lt;DeviceID available=&quot;YES&quot;&gt;B4750E1B95784683&lt;/DeviceID&gt;&lt;CapabilityID&gt;10006&lt;/CapabilityID&gt;&lt;CapabilityValue&gt;%d&lt;/CapabilityValue&gt;&lt;/DeviceStatus&gt;", state, state)
+                var parameters = OrderedDictionary(object: body, forKey: "DeviceStatusList");
+                var results = NSMutableDictionary()
+                sleep(1);
+                var ret = basicService.soap.action("SetDeviceStatus", parameters: parameters, returnValues: results);
             }
-            var basicService = services.objectAtIndex(0) as BasicUPnPService
-            basicService.process();
-            
-            var parameters = OrderedDictionary(object: state, forKey: "BinaryState");
-            var results = NSMutableDictionary()
-            sleep(1);
-            var ret = basicService.soap.action("SetBinaryState", parameters: parameters, returnValues: results);
-        } else if (modelDescription == "Belkin WeMo Bridge for Zigbee bulbs"){
-            var services = NSArray(array: self.getServices().allValues)
-            for service in services {
-                var serviceUpnp = service as BasicUPnPService
-                service.process()
-            }
-            var basicService = services.objectAtIndex(8) as BasicUPnPService
-            basicService.process();
-            
-            var body = NSString(format: "&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&amp;lt;DeviceStatus&amp;gt;&amp;lt;IsGroupAction&amp;gt;NO&amp;lt;/IsGroupAction&amp;gt;&amp;lt;DeviceID available=&amp;quot;YES&amp;quot;&amp;gt;B4750E1B957846E4&amp;lt;/DeviceID&amp;gt;&amp;lt;CapabilityID&amp;gt;10006&amp;lt;/CapabilityID&amp;gt;&amp;lt;CapabilityValue&amp;gt;%d&amp;lt;/CapabilityValue&amp;gt;&amp;lt;/DeviceStatus&amp;gt;", state, state)
-            var parameters = OrderedDictionary(object: body, forKey: "DeviceStatusList");
-            var results = NSMutableDictionary()
-            sleep(1);
-            var ret = basicService.soap.action("SetDeviceStatus", parameters: parameters, returnValues: results);
-        }
+        });
     }
 }
