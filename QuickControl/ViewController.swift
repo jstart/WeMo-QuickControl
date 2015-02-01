@@ -10,23 +10,28 @@ import UIKit
 
 class ViewController: UITableViewController, UPnPDBObserver {
 
-    var devices = []
     let sharedDefaults = NSUserDefaults(suiteName:"group.truman.QuickControl")!
+    let deviceStore = DeviceStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Devices"
         var db = UPnPManager.GetInstance().DB
-        devices = db.rootDevices //BasicUPnPDevice
+        var savedDevices: NSMutableArray? = deviceStore.getDevices()
+        if let savedDevicesArray = savedDevices as NSMutableArray! {
+            tableView.reloadData()
+        }else {
+            deviceStore.devices = db.rootDevices //BasicUPnPDevice
+        }
         db.addObserver(self)
         UPnPManager.GetInstance().SSDP.searchSSDP
     }
 
     func UPnPDBUpdated(sender: UPnPDB!) {
         var db = UPnPManager.GetInstance().DB
-        devices = db.rootDevices
-//        sharedDefaults.setObject(devices, forKey: "Devices");
-        for object in devices  {
+        deviceStore.devices = db.rootDevices
+        deviceStore.saveDevices()
+        for object in deviceStore.devices  {
             let device = object as BasicUPnPDevice
             device.loadDeviceDescriptionFromXML
             NSLog("device name: %@", device.friendlyName);
@@ -42,20 +47,21 @@ class ViewController: UITableViewController, UPnPDBObserver {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return devices.count
+        return deviceStore.devices.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        let device = devices[indexPath.row] as BasicUPnPDevice
+        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
 
         cell.textLabel!.text = device.friendlyName
         cell.detailTextLabel!.text = device.modelDescription
+        cell.imageView!.image = device.smallIcon
         return cell;
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
-        let device = devices[indexPath.row] as BasicUPnPDevice
+        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
 
         return [UITableViewRowAction(style: .Normal, title: "On", handler: {(action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
                 device.changeState(1)
@@ -71,7 +77,7 @@ class ViewController: UITableViewController, UPnPDBObserver {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let device = devices[indexPath.row] as BasicUPnPDevice
+        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
         device.changeState(1)
     }
     

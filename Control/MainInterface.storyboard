@@ -16,23 +16,23 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hwn-RD-Q7b">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="pHu-Dm-xqp" detailTextLabel="hP8-k7-LR4" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="kdr-FM-ytU">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="pHu-Dm-xqp" detailTextLabel="hP8-k7-LR4" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="kdr-FM-ytU">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kdr-FM-ytU" id="kEm-Py-CIt">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoR-gP-cIN">
-                                                    <rect key="frame" x="270" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="260" y="0.0" width="60" height="50"/>
                                                     <color key="backgroundColor" red="0.75036090353260865" green="0.15763826588867066" blue="0.091572653702078455" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="mV5-DO-A9x"/>
+                                                        <constraint firstAttribute="width" constant="60" id="mV5-DO-A9x"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.99399201770000001" green="0.99399201770000001" blue="0.99399201770000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Off">
@@ -43,10 +43,10 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KA-ed-KCI">
-                                                    <rect key="frame" x="220" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="200" y="0.0" width="60" height="50"/>
                                                     <color key="backgroundColor" red="0.074124389010340852" green="0.75036090353260865" blue="0.30745478689614514" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="Liw-Ss-KVp"/>
+                                                        <constraint firstAttribute="width" constant="60" id="Liw-Ss-KVp"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.99399201770000001" green="0.99399201770000001" blue="0.99399201770000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="On">
@@ -79,7 +79,6 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="yoR-gP-cIN" secondAttribute="bottom" constant="-8.5" id="xtG-Zt-UoG"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -100,7 +99,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="106"/>
+                    <size key="freeformSize" width="320" height="72"/>
                     <connections>
                         <outlet property="tableView" destination="hwn-RD-Q7b" id="ZlY-Xm-zfe"/>
                     </connections>
