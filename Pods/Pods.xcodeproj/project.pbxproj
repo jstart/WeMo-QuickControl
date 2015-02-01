@@ -1,0 +1,993 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0334651F10C6DBEC18EABDB5 /* ssdpnotify.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6C09C84B3CB32DDC89C13D /* ssdpnotify.h */; };
+		087DF9DA904A59642FC44912 /* socketserverconnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 710222EDE73B1F0E68DD4F38 /* socketserverconnection.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		093DE7BF0D59283AC3EFBA97 /* ssdpsearchresp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A43D9A6E4640A8586A7B183 /* ssdpsearchresp.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0C4D18FE63FEB241A6D2643A /* ssdpparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 92872CA989616D4D5A866510 /* ssdpparser.h */; };
+		0CEFCCD80C2556BF8CA7D582 /* UPnPEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 05CC0035EFBF7722C018F036 /* UPnPEvents.h */; };
+		0FBB92ADA20A2B5548F70D71 /* ssdpnotifyupdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFDF19B76FDD89C2D0C91 /* ssdpnotifyupdate.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		11CA20EDA46757E4EBF9ADA3 /* BasicParserAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 1474387C76C2C546385E8E23 /* BasicParserAsset.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		15C4809C97C55D7EC4A32AF6 /* UPnPEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = B54AFD38AAA77B43FD262896 /* UPnPEvents.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1630C1655284254E72053438 /* ssdpsearchreq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B04F8CFB8AF2FF6B5EC08DC3 /* ssdpsearchreq.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		16C7DD9B0FD30FD05AF99901 /* basichttpserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 317CB49110A6246F6EB6BE35 /* basichttpserver.h */; };
+		1FC8C617C4B577483281A58A /* ssdpdb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 654E17F50B7BA5744E9D9324 /* ssdpdb.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2131D1B77A4767F3B3B9BB67 /* CocoaTools.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDDB2BBBA298ECA5016931E /* CocoaTools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2476F260B02DB8515904B1DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E84BAAA65895653C11900B2 /* Foundation.framework */; };
+		25FB4DAC06C6038325C55E6F /* BasicParserAsset.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EFFAB330CF1CE1E933FC73 /* BasicParserAsset.h */; };
+		26701A4EF32F67E72BB49597 /* ssdphttp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B53118C00C8E31768DE8528E /* ssdphttp.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		272A5940B1BD9964AE03E2A6 /* ssdptools.h in Headers */ = {isa = PBXBuildFile; fileRef = 092E44345F24F927F60AD734 /* ssdptools.h */; };
+		2AD4AF9E2DA1F8017D86E7F6 /* SSDPDB_ObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC952513D9E5A3D4563A8A0F /* SSDPDB_ObjC.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2C2FFB08F4DA04B9B4155108 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9EFF9096979F9E88AE6D70 /* Pods-dummy.m */; };
+		31205DAC88F7D39890610A78 /* UPnPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E96AEE7792C7943EA35FB672 /* UPnPManager.h */; };
+		354DE6678AEE6D2B56EDB8F6 /* LastChangeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCBA4F901E15997AD6C544 /* LastChangeParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		381ABB047492FCC394A23631 /* MediaPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = 37802071F4C14E7AD2BEAFF5 /* MediaPlaylist.h */; };
+		3EA17785C3E776412DC504A9 /* osal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFD36E8867618BE3F00E844 /* osal.h */; };
+		411C0429A3DE48FAB8FF95CE /* socketserverconnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 680D4C80099569F6E119B2DF /* socketserverconnection.h */; };
+		428809A144C08EE0D628CC99 /* basichttpobserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F87BF7FAE9E8E6C5D05EAC1 /* basichttpobserver.h */; };
+		4403F8A30EE74F6FAB1018E3 /* StateVariableRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943971F6AC190A60C40E796 /* StateVariableRange.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		444F295A2816EA9033A6D20E /* ssdpdbobserver.h in Headers */ = {isa = PBXBuildFile; fileRef = C55A734C1DBE507121B719B0 /* ssdpdbobserver.h */; };
+		4525F43310D9CC4271FA3051 /* ssdptools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAA3F4B4B0C7FC031CEB741C /* ssdptools.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4B64E81A536BA6257F794536 /* ssdpsearchreq.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FBE66212F18275D6F9E139F /* ssdpsearchreq.h */; };
+		4B6F90372D0539A4E345ACEE /* BasicDeviceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 34801AD249691D1B9A242EDC /* BasicDeviceParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4B73F3168A88D9C7E4AE55AF /* UPnPEventParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AD9EE1F1818366196840AD /* UPnPEventParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C08C08D440ECA2C55331073 /* httpsession.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A8968C70CE140CD6A96510 /* httpsession.h */; };
+		4D174819F48AF4E5452851C5 /* BasicUPnPDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D9052FEA409044C1CD30F8B /* BasicUPnPDevice.h */; };
+		4D8467911553AB91B617ACCE /* ssdpparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B7681E2979BA7017D33BD92 /* ssdpparser.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4FD76E8F644BB1A76F1B9FC0 /* upnp.h in Headers */ = {isa = PBXBuildFile; fileRef = F52DBEA128DF6FCC64807A85 /* upnp.h */; };
+		522B45ED5DE41AAA6717D8B4 /* SocketServer_ObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C560F29F3A7E69D00FDF2B /* SocketServer_ObjC.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52FF320716DC88EE2CF7C691 /* UPnPEventParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B6A4626B05343B517BB38701 /* UPnPEventParser.h */; };
+		542B5F01EFA2D2BB2B81D1F7 /* BasicHTTPServer_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 17295D85E03B2F9690B091A6 /* BasicHTTPServer_ObjC.h */; };
+		5A0FAB892763032079D67DAC /* SoapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E646A73D00EC63C84905808A /* SoapAction.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A4DC00EBEA4CAC25F593AF8 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F16E5F57890ACC13C9250BA /* OrderedDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BC02E8F3CDBEB1935E0816C /* UPnPDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 53C610F84E5F3B14E62A8094 /* UPnPDB.h */; };
+		5CA0BB8A064484A63C488A1B /* ssdpsearchresp.h in Headers */ = {isa = PBXBuildFile; fileRef = 778035D826F20CBBDA27BFEB /* ssdpsearchresp.h */; };
+		5CA196B2704A4A003CD9C23E /* ssdpnotifyupdate.h in Headers */ = {isa = PBXBuildFile; fileRef = 13E693203A3ACB64EE9E076F /* ssdpnotifyupdate.h */; };
+		5CD37AFAFB552F2D38FF27FC /* ssdphttp.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB12B23B23F7F6310675B3D /* ssdphttp.h */; };
+		6484B2C4CF1DFFD8D22D80B4 /* Pods-AutoCoding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0D18F6347C80A0ADEA386 /* Pods-AutoCoding-dummy.m */; };
+		672BE7D0AE0517644A78A117 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E84BAAA65895653C11900B2 /* Foundation.framework */; };
+		68036F1E8790D702B72EF658 /* BasicHTTPServer_ObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B75984907504517CB00B18B /* BasicHTTPServer_ObjC.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6AA002269F63C23555217B8C /* httpsession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19662E43F9EFB1DF7AF44BF7 /* httpsession.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B6A95314BF83472C502E096 /* BasicUPnPService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9996CD160C5DD03EE064F445 /* BasicUPnPService.h */; };
+		6C95C8F7AF4322414DA6B454 /* BasicUPnPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C98C5EAB1A7C35142E15F0 /* BasicUPnPDevice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6E42FA2DD756EA2E4F1201D3 /* ssdpmsearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7F7474801DDEAAC9F18315 /* ssdpmsearch.h */; };
+		751549D37BA0EA320A2AC7CE /* StateVariableList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB98B9EFE5CA6A02A82D1B7 /* StateVariableList.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C3D01A97A330FF026159D43 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 800258EFCDE341F5C90B97FF /* main.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7E34EB279FA22E8BAF74464D /* BasicParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50E1CC6F7EFAA34DAA41C7 /* BasicParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7ED39303E3063747944950D4 /* ssdpnotifybye.h in Headers */ = {isa = PBXBuildFile; fileRef = EFA32ADF89D005DC6E022809 /* ssdpnotifybye.h */; };
+		8140A329313BA087D2D41C39 /* Pods-upnpx-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAAC48190229BCD73FE5206 /* Pods-upnpx-dummy.m */; };
+		889E240F34A29EBFAF7B665C /* StateVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0330A7AB20BE3A88146FE44A /* StateVariable.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8F6BAF36E11AAE2AD151A797 /* StateVariableList.h in Headers */ = {isa = PBXBuildFile; fileRef = 53ABB8013785171C3C189062 /* StateVariableList.h */; };
+		927C9AC8D4E8D3A552E7B9B0 /* ssdpnotify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8EC42D9B248D423EB4832 /* ssdpnotify.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		931440EDD37BB35A3D40AB67 /* ssdpnotifyalive.h in Headers */ = {isa = PBXBuildFile; fileRef = C59DAA9E4884BE68EFF45E61 /* ssdpnotifyalive.h */; };
+		943EAC3A3846571120829137 /* UPnPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE15CB99266A4C73CC9BB8F /* UPnPManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9666C88A36AE6487B630F791 /* BasicServiceParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D03A001B8448448BB5DDF08 /* BasicServiceParser.h */; };
+		98864A365E92DB618FE238CB /* AutoCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBCDED863204FE76B25B19E /* AutoCoding.h */; };
+		9CEC4BA7F50B8FC8D3384405 /* ssdpmessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CE21E17D636B7E56227D3BF /* ssdpmessage.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9E7171FB2E9171E452E75DA2 /* ssdpnotifybye.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEF92A5908632BABFEAB6CA8 /* ssdpnotifybye.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A14B033F7F144C8EC5F15540 /* basichttpserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925B582110945D0AA04939AC /* basichttpserver.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A27CC0C9266204B73BDAB5C9 /* SSDPDB_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E345FF883C5BB9ACC229C6F /* SSDPDB_ObjC.h */; };
+		A338F1FF21DBEEA0F451F1B0 /* ssdpdbdevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4465E655C4333F05D1A860D0 /* ssdpdbdevice.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A5D85FE287C2F89F56363486 /* socketserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B389C5C244A61DA4D891CAB /* socketserver.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A855A6472AB75AEC374D8CAD /* tools.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEA6B53B2FC4089FE588CC4 /* tools.h */; };
+		AAD01BD8F9E6480356577A09 /* ssdpnotifyalive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D15AA0DC3F95EC224194E1E /* ssdpnotifyalive.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ABE3FAA185BF777AF92A7D59 /* StateVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 39188CD740DC64AC3EBCF3B6 /* StateVariable.h */; };
+		B1D188365B687699E46F2B18 /* ssdpdbdevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 03390415BE96C86754E48C42 /* ssdpdbdevice.h */; };
+		B2910A5FAC6BACAEBE986E50 /* UPnPDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34163F343784953B0EF117 /* UPnPDB.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B8541A47BAED5279F674D8B9 /* BasicDeviceParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 69DA0567C82BDC93F7D0078D /* BasicDeviceParser.h */; };
+		BDCB55FCB5FB3E8D7BBC2930 /* socketServerobserver.h in Headers */ = {isa = PBXBuildFile; fileRef = F7A407A922821DDA6B2B96E6 /* socketServerobserver.h */; };
+		BE0BE3079EAF8E0D8B54F27A /* DeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EED7F12578A566049E907C /* DeviceFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BFF40142DC0F698A38CF7561 /* upnp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1213FB4D58AC26B0F3362C17 /* upnp.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4080E46D373057136459EEB /* AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E090CC1F270B5A5A4B0E4 /* AutoCoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C95744E69AAF9156ECC3E14B /* SocketServer_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 7430531A4FD85E3152017961 /* SocketServer_ObjC.h */; };
+		CEC88AC9C67401241464C230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E84BAAA65895653C11900B2 /* Foundation.framework */; };
+		D022B5F207871A9BF245FD68 /* ssdpobserver.h in Headers */ = {isa = PBXBuildFile; fileRef = C09709F234C2436C6AB01FA7 /* ssdpobserver.h */; };
+		D02405E0237A26717386D505 /* SoapAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D674EBC965EFADC11E7DD3B /* SoapAction.h */; };
+		D18E150C3B06F6BFB6262D8B /* StateVariableRange.h in Headers */ = {isa = PBXBuildFile; fileRef = F9343029749E4F9269C6943C /* StateVariableRange.h */; };
+		D35E0612E3D8FB9AA489B8D5 /* ssdpmsearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969957845307BFEDD69E0102 /* ssdpmsearch.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6C42FAE06886DDA7C78825B /* BasicParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C00BAAA0729B8DDA4C1D55 /* BasicParser.h */; };
+		D9CE78B38B9DCD87CE10C06B /* BasicServiceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8989BD35FB8BF2398D5E1AF1 /* BasicServiceParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DAC48B3BBB70ACA254EE9EC2 /* ssdpmessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F55C6715F173042FED95A7 /* ssdpmessage.h */; };
+		E446A70A70A158446792EBDC /* DeviceFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC193DAD5D113EABD5B686 /* DeviceFactory.h */; };
+		E4C0DA7FA60671F59826577A /* ssdp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41C7FCC1D01641584B76017A /* ssdp.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E6718ED9A3B083BD0820CB68 /* ssdpdb.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD9DBAFF28F24B7CE3889C2 /* ssdpdb.h */; };
+		EE2FBE179C7C787847EB22F5 /* BasicUPnPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 218743D45AF78C69492AE375 /* BasicUPnPService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F6B0B38D39A49A13C9C9D257 /* NSString+UPnPExtentions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09634169E0A52BD56A50FEB0 /* NSString+UPnPExtentions.h */; };
+		F7372DB51E015517717F0F0B /* LastChangeParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8C3E9D007C67F959B37316 /* LastChangeParser.h */; };
+		F90684F0739EC10A11EA9EC0 /* ssdp.h in Headers */ = {isa = PBXBuildFile; fileRef = B7D6A7CC6FD7B179BF7F510F /* ssdp.h */; };
+		F9095EE2033BE3BAFB4A2050 /* OrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AAA177AD3A19028F5F84C8D /* OrderedDictionary.h */; };
+		FA1DD53C587812E8FCA62190 /* iphoneport.h in Headers */ = {isa = PBXBuildFile; fileRef = 2669DC8B7501978DA5491AC6 /* iphoneport.h */; };
+		FA716E3DD8EF61B0D00C2B64 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1ADA997202EA2BC66B4518A /* tools.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FF1E1F29FBD3588191BB4F64 /* socketserver.h in Headers */ = {isa = PBXBuildFile; fileRef = B81806C892112D1BF0FE5298 /* socketserver.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A4531681C027FDD70486B3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4A91959E4DB8036F22BC9B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3781662917D5F66C8FFE4315;
+			remoteInfo = "Pods-AutoCoding";
+		};
+		E20281E8ED0A189FC92AC341 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4A91959E4DB8036F22BC9B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EC738876F7688A5B4BC9A67;
+			remoteInfo = "Pods-upnpx";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0330A7AB20BE3A88146FE44A /* StateVariable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = StateVariable.m; sourceTree = "<group>"; };
+		03390415BE96C86754E48C42 /* ssdpdbdevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpdbdevice.h; sourceTree = "<group>"; };
+		05CC0035EFBF7722C018F036 /* UPnPEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UPnPEvents.h; sourceTree = "<group>"; };
+		06CC193DAD5D113EABD5B686 /* DeviceFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DeviceFactory.h; sourceTree = "<group>"; };
+		092E44345F24F927F60AD734 /* ssdptools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdptools.h; sourceTree = "<group>"; };
+		09634169E0A52BD56A50FEB0 /* NSString+UPnPExtentions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+UPnPExtentions.h"; sourceTree = "<group>"; };
+		0A50E1CC6F7EFAA34DAA41C7 /* BasicParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BasicParser.m; sourceTree = "<group>"; };
+		1213FB4D58AC26B0F3362C17 /* upnp.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = upnp.cpp; sourceTree = "<group>"; };
+		13E693203A3ACB64EE9E076F /* ssdpnotifyupdate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpnotifyupdate.h; sourceTree = "<group>"; };
+		1474387C76C2C546385E8E23 /* BasicParserAsset.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BasicParserAsset.m; sourceTree = "<group>"; };
+		14A8EC42D9B248D423EB4832 /* ssdpnotify.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpnotify.cpp; sourceTree = "<group>"; };
+		17295D85E03B2F9690B091A6 /* BasicHTTPServer_ObjC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BasicHTTPServer_ObjC.h; sourceTree = "<group>"; };
+		18E0D18F6347C80A0ADEA386 /* Pods-AutoCoding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AutoCoding-dummy.m"; sourceTree = "<group>"; };
+		19662E43F9EFB1DF7AF44BF7 /* httpsession.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = httpsession.cpp; sourceTree = "<group>"; };
+		1E345FF883C5BB9ACC229C6F /* SSDPDB_ObjC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SSDPDB_ObjC.h; sourceTree = "<group>"; };
+		1F7F7474801DDEAAC9F18315 /* ssdpmsearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpmsearch.h; sourceTree = "<group>"; };
+		218743D45AF78C69492AE375 /* BasicUPnPService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BasicUPnPService.m; sourceTree = "<group>"; };
+		2669DC8B7501978DA5491AC6 /* iphoneport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = iphoneport.h; sourceTree = "<group>"; };
+		2BD9DBAFF28F24B7CE3889C2 /* ssdpdb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpdb.h; sourceTree = "<group>"; };
+		2E7E090CC1F270B5A5A4B0E4 /* AutoCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AutoCoding.m; path = AutoCoding/AutoCoding.m; sourceTree = "<group>"; };
+		2F16E5F57890ACC13C9250BA /* OrderedDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
+		2F34163F343784953B0EF117 /* UPnPDB.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UPnPDB.m; sourceTree = "<group>"; };
+		3064BD26A9D9D9C9084E864F /* Pods-AutoCoding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AutoCoding.xcconfig"; sourceTree = "<group>"; };
+		317CB49110A6246F6EB6BE35 /* basichttpserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = basichttpserver.h; sourceTree = "<group>"; };
+		34801AD249691D1B9A242EDC /* BasicDeviceParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BasicDeviceParser.m; sourceTree = "<group>"; };
+		37802071F4C14E7AD2BEAFF5 /* MediaPlaylist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MediaPlaylist.h; sourceTree = "<group>"; };
+		39188CD740DC64AC3EBCF3B6 /* StateVariable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StateVariable.h; sourceTree = "<group>"; };
+		3AB98B9EFE5CA6A02A82D1B7 /* StateVariableList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = StateVariableList.m; sourceTree = "<group>"; };
+		3E8C3E9D007C67F959B37316 /* LastChangeParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LastChangeParser.h; sourceTree = "<group>"; };
+		3FBE66212F18275D6F9E139F /* ssdpsearchreq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpsearchreq.h; sourceTree = "<group>"; };
+		41C7FCC1D01641584B76017A /* ssdp.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdp.cpp; sourceTree = "<group>"; };
+		4465E655C4333F05D1A860D0 /* ssdpdbdevice.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpdbdevice.cpp; sourceTree = "<group>"; };
+		4B75984907504517CB00B18B /* BasicHTTPServer_ObjC.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicHTTPServer_ObjC.mm; sourceTree = "<group>"; };
+		4BAAC48190229BCD73FE5206 /* Pods-upnpx-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-upnpx-dummy.m"; sourceTree = "<group>"; };
+		4D9052FEA409044C1CD30F8B /* BasicUPnPDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BasicUPnPDevice.h; sourceTree = "<group>"; };
+		4EFD36E8867618BE3F00E844 /* osal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = osal.h; sourceTree = "<group>"; };
+		53ABB8013785171C3C189062 /* StateVariableList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StateVariableList.h; sourceTree = "<group>"; };
+		53C610F84E5F3B14E62A8094 /* UPnPDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UPnPDB.h; sourceTree = "<group>"; };
+		55AD9EE1F1818366196840AD /* UPnPEventParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UPnPEventParser.m; sourceTree = "<group>"; };
+		571142ECB97742540248028A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5A43D9A6E4640A8586A7B183 /* ssdpsearchresp.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpsearchresp.cpp; sourceTree = "<group>"; };
+		5CE21E17D636B7E56227D3BF /* ssdpmessage.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpmessage.cpp; sourceTree = "<group>"; };
+		5D1852DDD1EB6F3239F6FFC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		5E84BAAA65895653C11900B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5F87BF7FAE9E8E6C5D05EAC1 /* basichttpobserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = basichttpobserver.h; sourceTree = "<group>"; };
+		654E17F50B7BA5744E9D9324 /* ssdpdb.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpdb.cpp; sourceTree = "<group>"; };
+		680D4C80099569F6E119B2DF /* socketserverconnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = socketserverconnection.h; sourceTree = "<group>"; };
+		69DA0567C82BDC93F7D0078D /* BasicDeviceParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BasicDeviceParser.h; sourceTree = "<group>"; };
+		6AAA177AD3A19028F5F84C8D /* OrderedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
+		6BD62BDCABAA10C4B528DE7C /* Pods-AutoCoding-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AutoCoding-Private.xcconfig"; sourceTree = "<group>"; };
+		6D15AA0DC3F95EC224194E1E /* ssdpnotifyalive.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpnotifyalive.cpp; sourceTree = "<group>"; };
+		710222EDE73B1F0E68DD4F38 /* socketserverconnection.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = socketserverconnection.cpp; sourceTree = "<group>"; };
+		71F55C6715F173042FED95A7 /* ssdpmessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpmessage.h; sourceTree = "<group>"; };
+		7430531A4FD85E3152017961 /* SocketServer_ObjC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SocketServer_ObjC.h; sourceTree = "<group>"; };
+		7740BAE5DC8EA766A465BAA9 /* Pods-AutoCoding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AutoCoding-prefix.pch"; sourceTree = "<group>"; };
+		778035D826F20CBBDA27BFEB /* ssdpsearchresp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpsearchresp.h; sourceTree = "<group>"; };
+		781D048AA1C85827FDA7E04F /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		7943971F6AC190A60C40E796 /* StateVariableRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = StateVariableRange.m; sourceTree = "<group>"; };
+		7D03A001B8448448BB5DDF08 /* BasicServiceParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BasicServiceParser.h; sourceTree = "<group>"; };
+		800258EFCDE341F5C90B97FF /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		80C98C5EAB1A7C35142E15F0 /* BasicUPnPDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BasicUPnPDevice.m; sourceTree = "<group>"; };
+		84BDFDF19B76FDD89C2D0C91 /* ssdpnotifyupdate.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpnotifyupdate.cpp; sourceTree = "<group>"; };
+		84D32D4DD8B80745B4AC2136 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8989BD35FB8BF2398D5E1AF1 /* BasicServiceParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BasicServiceParser.m; sourceTree = "<group>"; };
+		90C560F29F3A7E69D00FDF2B /* SocketServer_ObjC.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = SocketServer_ObjC.mm; sourceTree = "<group>"; };
+		925B582110945D0AA04939AC /* basichttpserver.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = basichttpserver.cpp; sourceTree = "<group>"; };
+		92872CA989616D4D5A866510 /* ssdpparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpparser.h; sourceTree = "<group>"; };
+		93EFFAB330CF1CE1E933FC73 /* BasicParserAsset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BasicParserAsset.h; sourceTree = "<group>"; };
+		969957845307BFEDD69E0102 /* ssdpmsearch.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpmsearch.cpp; sourceTree = "<group>"; };
+		9722421DC307C54EBDCF4208 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		9996CD160C5DD03EE064F445 /* BasicUPnPService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BasicUPnPService.h; sourceTree = "<group>"; };
+		9B389C5C244A61DA4D891CAB /* socketserver.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = socketserver.cpp; sourceTree = "<group>"; };
+		9B7681E2979BA7017D33BD92 /* ssdpparser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpparser.cpp; sourceTree = "<group>"; };
+		9C8ED53694283C287BCC5F31 /* Pods-upnpx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-upnpx.xcconfig"; sourceTree = "<group>"; };
+		9D674EBC965EFADC11E7DD3B /* SoapAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SoapAction.h; sourceTree = "<group>"; };
+		A812625F188EDBAF36F19CC7 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		A8C00BAAA0729B8DDA4C1D55 /* BasicParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BasicParser.h; sourceTree = "<group>"; };
+		AAA3F4B4B0C7FC031CEB741C /* ssdptools.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdptools.cpp; sourceTree = "<group>"; };
+		AAEA6B53B2FC4089FE588CC4 /* tools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
+		AC952513D9E5A3D4563A8A0F /* SSDPDB_ObjC.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = SSDPDB_ObjC.mm; sourceTree = "<group>"; };
+		AEF92A5908632BABFEAB6CA8 /* ssdpnotifybye.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpnotifybye.cpp; sourceTree = "<group>"; };
+		B04F8CFB8AF2FF6B5EC08DC3 /* ssdpsearchreq.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdpsearchreq.cpp; sourceTree = "<group>"; };
+		B30FCE82956756DB8DBC525C /* Pods-upnpx-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-upnpx-Private.xcconfig"; sourceTree = "<group>"; };
+		B53118C00C8E31768DE8528E /* ssdphttp.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = ssdphttp.cpp; sourceTree = "<group>"; };
+		B54AFD38AAA77B43FD262896 /* UPnPEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UPnPEvents.m; sourceTree = "<group>"; };
+		B6A4626B05343B517BB38701 /* UPnPEventParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UPnPEventParser.h; sourceTree = "<group>"; };
+		B7D6A7CC6FD7B179BF7F510F /* ssdp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdp.h; sourceTree = "<group>"; };
+		B81806C892112D1BF0FE5298 /* socketserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = socketserver.h; sourceTree = "<group>"; };
+		BA6C09C84B3CB32DDC89C13D /* ssdpnotify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpnotify.h; sourceTree = "<group>"; };
+		BDDDB2BBBA298ECA5016931E /* CocoaTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CocoaTools.m; sourceTree = "<group>"; };
+		C09709F234C2436C6AB01FA7 /* ssdpobserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpobserver.h; sourceTree = "<group>"; };
+		C1ADA997202EA2BC66B4518A /* tools.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
+		C3798B57208CEC4A184A7AEB /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		C3C0D6C4DC70B782E82D3708 /* Pods-upnpx-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-upnpx-prefix.pch"; sourceTree = "<group>"; };
+		C55A734C1DBE507121B719B0 /* ssdpdbobserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpdbobserver.h; sourceTree = "<group>"; };
+		C59DAA9E4884BE68EFF45E61 /* ssdpnotifyalive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpnotifyalive.h; sourceTree = "<group>"; };
+		CABCBA4F901E15997AD6C544 /* LastChangeParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LastChangeParser.m; sourceTree = "<group>"; };
+		DDBCDED863204FE76B25B19E /* AutoCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AutoCoding.h; path = AutoCoding/AutoCoding.h; sourceTree = "<group>"; };
+		E2A8968C70CE140CD6A96510 /* httpsession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = httpsession.h; sourceTree = "<group>"; };
+		E2EED7F12578A566049E907C /* DeviceFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DeviceFactory.m; sourceTree = "<group>"; };
+		E2EF8835BF24B0241572C925 /* libPods-AutoCoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoCoding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E646A73D00EC63C84905808A /* SoapAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SoapAction.m; sourceTree = "<group>"; };
+		E96AEE7792C7943EA35FB672 /* UPnPManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UPnPManager.h; sourceTree = "<group>"; };
+		EB9EFF9096979F9E88AE6D70 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		EFA32ADF89D005DC6E022809 /* ssdpnotifybye.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdpnotifybye.h; sourceTree = "<group>"; };
+		F507BDA850AE0327A82C5A71 /* libPods-upnpx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-upnpx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52DBEA128DF6FCC64807A85 /* upnp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = upnp.h; sourceTree = "<group>"; };
+		F72A783F224C407C77DD48D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A407A922821DDA6B2B96E6 /* socketServerobserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = socketServerobserver.h; sourceTree = "<group>"; };
+		F9343029749E4F9269C6943C /* StateVariableRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StateVariableRange.h; sourceTree = "<group>"; };
+		FBB12B23B23F7F6310675B3D /* ssdphttp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ssdphttp.h; sourceTree = "<group>"; };
+		FEE15CB99266A4C73CC9BB8F /* UPnPManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UPnPManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF5D7B8D5A2BFC8E5ADBFEBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672BE7D0AE0517644A78A117 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECA53F86F7AB99DDB665B5BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2476F260B02DB8515904B1DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBF64442E6F7E11F52E027D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC88AC9C67401241464C230 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07EE553845B20D22A8608BDD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3064BD26A9D9D9C9084E864F /* Pods-AutoCoding.xcconfig */,
+				6BD62BDCABAA10C4B528DE7C /* Pods-AutoCoding-Private.xcconfig */,
+				18E0D18F6347C80A0ADEA386 /* Pods-AutoCoding-dummy.m */,
+				7740BAE5DC8EA766A465BAA9 /* Pods-AutoCoding-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-AutoCoding";
+			sourceTree = "<group>";
+		};
+		1402D18ADD73FA8B8F5A6B95 /* AutoCoding */ = {
+			isa = PBXGroup;
+			children = (
+				DDBCDED863204FE76B25B19E /* AutoCoding.h */,
+				2E7E090CC1F270B5A5A4B0E4 /* AutoCoding.m */,
+				07EE553845B20D22A8608BDD /* Support Files */,
+			);
+			path = AutoCoding;
+			sourceTree = "<group>";
+		};
+		18298CFCD22C85B8DFDE76E2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F8C1A0C98CB4E988E6D526A /* upnpx */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2A3CDF406CE69B743AA61258 = {
+			isa = PBXGroup;
+			children = (
+				571142ECB97742540248028A /* Podfile */,
+				18298CFCD22C85B8DFDE76E2 /* Development Pods */,
+				2ACEFE2A436612666F5A5A0E /* Frameworks */,
+				30193A509108AFD43F1B2DCB /* Pods */,
+				F7C9AAEF2333D8B4A1A769E6 /* Products */,
+				E0EE5D02ABB0C8D48BD22D94 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		2ACEFE2A436612666F5A5A0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF629A37D0CCFC35259C3B7D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30193A509108AFD43F1B2DCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1402D18ADD73FA8B8F5A6B95 /* AutoCoding */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3955AB37EEA54CEF7F13B8EC /* ssdp */ = {
+			isa = PBXGroup;
+			children = (
+				AC952513D9E5A3D4563A8A0F /* SSDPDB_ObjC.mm */,
+				800258EFCDE341F5C90B97FF /* main.mm */,
+				41C7FCC1D01641584B76017A /* ssdp.cpp */,
+				B7D6A7CC6FD7B179BF7F510F /* ssdp.h */,
+				654E17F50B7BA5744E9D9324 /* ssdpdb.cpp */,
+				2BD9DBAFF28F24B7CE3889C2 /* ssdpdb.h */,
+				4465E655C4333F05D1A860D0 /* ssdpdbdevice.cpp */,
+				03390415BE96C86754E48C42 /* ssdpdbdevice.h */,
+				C55A734C1DBE507121B719B0 /* ssdpdbobserver.h */,
+				B53118C00C8E31768DE8528E /* ssdphttp.cpp */,
+				FBB12B23B23F7F6310675B3D /* ssdphttp.h */,
+				5CE21E17D636B7E56227D3BF /* ssdpmessage.cpp */,
+				71F55C6715F173042FED95A7 /* ssdpmessage.h */,
+				969957845307BFEDD69E0102 /* ssdpmsearch.cpp */,
+				1F7F7474801DDEAAC9F18315 /* ssdpmsearch.h */,
+				14A8EC42D9B248D423EB4832 /* ssdpnotify.cpp */,
+				BA6C09C84B3CB32DDC89C13D /* ssdpnotify.h */,
+				6D15AA0DC3F95EC224194E1E /* ssdpnotifyalive.cpp */,
+				C59DAA9E4884BE68EFF45E61 /* ssdpnotifyalive.h */,
+				AEF92A5908632BABFEAB6CA8 /* ssdpnotifybye.cpp */,
+				EFA32ADF89D005DC6E022809 /* ssdpnotifybye.h */,
+				84BDFDF19B76FDD89C2D0C91 /* ssdpnotifyupdate.cpp */,
+				13E693203A3ACB64EE9E076F /* ssdpnotifyupdate.h */,
+				C09709F234C2436C6AB01FA7 /* ssdpobserver.h */,
+				9B7681E2979BA7017D33BD92 /* ssdpparser.cpp */,
+				92872CA989616D4D5A866510 /* ssdpparser.h */,
+				B04F8CFB8AF2FF6B5EC08DC3 /* ssdpsearchreq.cpp */,
+				3FBE66212F18275D6F9E139F /* ssdpsearchreq.h */,
+				5A43D9A6E4640A8586A7B183 /* ssdpsearchresp.cpp */,
+				778035D826F20CBBDA27BFEB /* ssdpsearchresp.h */,
+				AAA3F4B4B0C7FC031CEB741C /* ssdptools.cpp */,
+				092E44345F24F927F60AD734 /* ssdptools.h */,
+				1213FB4D58AC26B0F3362C17 /* upnp.cpp */,
+				F52DBEA128DF6FCC64807A85 /* upnp.h */,
+			);
+			path = ssdp;
+			sourceTree = "<group>";
+		};
+		5BEB8C9BA7C6D89F49A7DD38 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				4EFD36E8867618BE3F00E844 /* osal.h */,
+				C1ADA997202EA2BC66B4518A /* tools.cpp */,
+				AAEA6B53B2FC4089FE588CC4 /* tools.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		74F575A6AC5741ACC9678B59 /* eventserver */ = {
+			isa = PBXGroup;
+			children = (
+				4B75984907504517CB00B18B /* BasicHTTPServer_ObjC.mm */,
+				7430531A4FD85E3152017961 /* SocketServer_ObjC.h */,
+				90C560F29F3A7E69D00FDF2B /* SocketServer_ObjC.mm */,
+				5F87BF7FAE9E8E6C5D05EAC1 /* basichttpobserver.h */,
+				925B582110945D0AA04939AC /* basichttpserver.cpp */,
+				317CB49110A6246F6EB6BE35 /* basichttpserver.h */,
+				19662E43F9EFB1DF7AF44BF7 /* httpsession.cpp */,
+				E2A8968C70CE140CD6A96510 /* httpsession.h */,
+				F7A407A922821DDA6B2B96E6 /* socketServerobserver.h */,
+				9B389C5C244A61DA4D891CAB /* socketserver.cpp */,
+				B81806C892112D1BF0FE5298 /* socketserver.h */,
+				710222EDE73B1F0E68DD4F38 /* socketserverconnection.cpp */,
+				680D4C80099569F6E119B2DF /* socketserverconnection.h */,
+			);
+			path = eventserver;
+			sourceTree = "<group>";
+		};
+		7C13AA51A84AAD3BF90F86F5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C8ED53694283C287BCC5F31 /* Pods-upnpx.xcconfig */,
+				B30FCE82956756DB8DBC525C /* Pods-upnpx-Private.xcconfig */,
+				4BAAC48190229BCD73FE5206 /* Pods-upnpx-dummy.m */,
+				C3C0D6C4DC70B782E82D3708 /* Pods-upnpx-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../WeMo-QuickControl/Pods/Target Support Files/Pods-upnpx";
+			sourceTree = "<group>";
+		};
+		7C3444BE24282C88602FE046 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				69DA0567C82BDC93F7D0078D /* BasicDeviceParser.h */,
+				17295D85E03B2F9690B091A6 /* BasicHTTPServer_ObjC.h */,
+				A8C00BAAA0729B8DDA4C1D55 /* BasicParser.h */,
+				93EFFAB330CF1CE1E933FC73 /* BasicParserAsset.h */,
+				7D03A001B8448448BB5DDF08 /* BasicServiceParser.h */,
+				4D9052FEA409044C1CD30F8B /* BasicUPnPDevice.h */,
+				9996CD160C5DD03EE064F445 /* BasicUPnPService.h */,
+				06CC193DAD5D113EABD5B686 /* DeviceFactory.h */,
+				3E8C3E9D007C67F959B37316 /* LastChangeParser.h */,
+				37802071F4C14E7AD2BEAFF5 /* MediaPlaylist.h */,
+				09634169E0A52BD56A50FEB0 /* NSString+UPnPExtentions.h */,
+				1E345FF883C5BB9ACC229C6F /* SSDPDB_ObjC.h */,
+				9D674EBC965EFADC11E7DD3B /* SoapAction.h */,
+				39188CD740DC64AC3EBCF3B6 /* StateVariable.h */,
+				53ABB8013785171C3C189062 /* StateVariableList.h */,
+				F9343029749E4F9269C6943C /* StateVariableRange.h */,
+				53C610F84E5F3B14E62A8094 /* UPnPDB.h */,
+				B6A4626B05343B517BB38701 /* UPnPEventParser.h */,
+				05CC0035EFBF7722C018F036 /* UPnPEvents.h */,
+				E96AEE7792C7943EA35FB672 /* UPnPManager.h */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		8C777DECE8FF6A5BD086CAD4 /* port */ = {
+			isa = PBXGroup;
+			children = (
+				949AAB2DC2283463192F9D4F /* ios */,
+			);
+			path = port;
+			sourceTree = "<group>";
+		};
+		8F8C1A0C98CB4E988E6D526A /* upnpx */ = {
+			isa = PBXGroup;
+			children = (
+				7C13AA51A84AAD3BF90F86F5 /* Support Files */,
+				D38C4D18D7C98CDDE7C370FC /* src */,
+			);
+			name = upnpx;
+			path = ../../upnpx;
+			sourceTree = "<group>";
+		};
+		949AAB2DC2283463192F9D4F /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				2669DC8B7501978DA5491AC6 /* iphoneport.h */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		BF629A37D0CCFC35259C3B7D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5E84BAAA65895653C11900B2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D1C4B0BB7E60710301EEA6B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84D32D4DD8B80745B4AC2136 /* Pods-acknowledgements.markdown */,
+				A812625F188EDBAF36F19CC7 /* Pods-acknowledgements.plist */,
+				EB9EFF9096979F9E88AE6D70 /* Pods-dummy.m */,
+				C3798B57208CEC4A184A7AEB /* Pods-environment.h */,
+				781D048AA1C85827FDA7E04F /* Pods-resources.sh */,
+				5D1852DDD1EB6F3239F6FFC7 /* Pods.debug.xcconfig */,
+				9722421DC307C54EBDCF4208 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		D38C4D18D7C98CDDE7C370FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7C3444BE24282C88602FE046 /* api */,
+				5BEB8C9BA7C6D89F49A7DD38 /* common */,
+				74F575A6AC5741ACC9678B59 /* eventserver */,
+				8C777DECE8FF6A5BD086CAD4 /* port */,
+				3955AB37EEA54CEF7F13B8EC /* ssdp */,
+				D619F1DF25190DBCFBAEED2B /* upnp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		D619F1DF25190DBCFBAEED2B /* upnp */ = {
+			isa = PBXGroup;
+			children = (
+				34801AD249691D1B9A242EDC /* BasicDeviceParser.m */,
+				0A50E1CC6F7EFAA34DAA41C7 /* BasicParser.m */,
+				1474387C76C2C546385E8E23 /* BasicParserAsset.m */,
+				8989BD35FB8BF2398D5E1AF1 /* BasicServiceParser.m */,
+				80C98C5EAB1A7C35142E15F0 /* BasicUPnPDevice.m */,
+				218743D45AF78C69492AE375 /* BasicUPnPService.m */,
+				BDDDB2BBBA298ECA5016931E /* CocoaTools.m */,
+				E2EED7F12578A566049E907C /* DeviceFactory.m */,
+				CABCBA4F901E15997AD6C544 /* LastChangeParser.m */,
+				6AAA177AD3A19028F5F84C8D /* OrderedDictionary.h */,
+				2F16E5F57890ACC13C9250BA /* OrderedDictionary.m */,
+				E646A73D00EC63C84905808A /* SoapAction.m */,
+				0330A7AB20BE3A88146FE44A /* StateVariable.m */,
+				3AB98B9EFE5CA6A02A82D1B7 /* StateVariableList.m */,
+				7943971F6AC190A60C40E796 /* StateVariableRange.m */,
+				2F34163F343784953B0EF117 /* UPnPDB.m */,
+				55AD9EE1F1818366196840AD /* UPnPEventParser.m */,
+				B54AFD38AAA77B43FD262896 /* UPnPEvents.m */,
+				FEE15CB99266A4C73CC9BB8F /* UPnPManager.m */,
+			);
+			path = upnp;
+			sourceTree = "<group>";
+		};
+		E0EE5D02ABB0C8D48BD22D94 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1C4B0BB7E60710301EEA6B4 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F7C9AAEF2333D8B4A1A769E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F72A783F224C407C77DD48D1 /* libPods.a */,
+				E2EF8835BF24B0241572C925 /* libPods-AutoCoding.a */,
+				F507BDA850AE0327A82C5A71 /* libPods-upnpx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3AC6252647F73E2710D046AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98864A365E92DB618FE238CB /* AutoCoding.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BFFA468BA42F737ECD04BD7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8541A47BAED5279F674D8B9 /* BasicDeviceParser.h in Headers */,
+				542B5F01EFA2D2BB2B81D1F7 /* BasicHTTPServer_ObjC.h in Headers */,
+				D6C42FAE06886DDA7C78825B /* BasicParser.h in Headers */,
+				25FB4DAC06C6038325C55E6F /* BasicParserAsset.h in Headers */,
+				9666C88A36AE6487B630F791 /* BasicServiceParser.h in Headers */,
+				4D174819F48AF4E5452851C5 /* BasicUPnPDevice.h in Headers */,
+				6B6A95314BF83472C502E096 /* BasicUPnPService.h in Headers */,
+				E446A70A70A158446792EBDC /* DeviceFactory.h in Headers */,
+				F7372DB51E015517717F0F0B /* LastChangeParser.h in Headers */,
+				381ABB047492FCC394A23631 /* MediaPlaylist.h in Headers */,
+				F6B0B38D39A49A13C9C9D257 /* NSString+UPnPExtentions.h in Headers */,
+				F9095EE2033BE3BAFB4A2050 /* OrderedDictionary.h in Headers */,
+				A27CC0C9266204B73BDAB5C9 /* SSDPDB_ObjC.h in Headers */,
+				D02405E0237A26717386D505 /* SoapAction.h in Headers */,
+				C95744E69AAF9156ECC3E14B /* SocketServer_ObjC.h in Headers */,
+				ABE3FAA185BF777AF92A7D59 /* StateVariable.h in Headers */,
+				8F6BAF36E11AAE2AD151A797 /* StateVariableList.h in Headers */,
+				D18E150C3B06F6BFB6262D8B /* StateVariableRange.h in Headers */,
+				5BC02E8F3CDBEB1935E0816C /* UPnPDB.h in Headers */,
+				52FF320716DC88EE2CF7C691 /* UPnPEventParser.h in Headers */,
+				0CEFCCD80C2556BF8CA7D582 /* UPnPEvents.h in Headers */,
+				31205DAC88F7D39890610A78 /* UPnPManager.h in Headers */,
+				428809A144C08EE0D628CC99 /* basichttpobserver.h in Headers */,
+				16C7DD9B0FD30FD05AF99901 /* basichttpserver.h in Headers */,
+				4C08C08D440ECA2C55331073 /* httpsession.h in Headers */,
+				FA1DD53C587812E8FCA62190 /* iphoneport.h in Headers */,
+				3EA17785C3E776412DC504A9 /* osal.h in Headers */,
+				BDCB55FCB5FB3E8D7BBC2930 /* socketServerobserver.h in Headers */,
+				FF1E1F29FBD3588191BB4F64 /* socketserver.h in Headers */,
+				411C0429A3DE48FAB8FF95CE /* socketserverconnection.h in Headers */,
+				F90684F0739EC10A11EA9EC0 /* ssdp.h in Headers */,
+				E6718ED9A3B083BD0820CB68 /* ssdpdb.h in Headers */,
+				B1D188365B687699E46F2B18 /* ssdpdbdevice.h in Headers */,
+				444F295A2816EA9033A6D20E /* ssdpdbobserver.h in Headers */,
+				5CD37AFAFB552F2D38FF27FC /* ssdphttp.h in Headers */,
+				DAC48B3BBB70ACA254EE9EC2 /* ssdpmessage.h in Headers */,
+				6E42FA2DD756EA2E4F1201D3 /* ssdpmsearch.h in Headers */,
+				0334651F10C6DBEC18EABDB5 /* ssdpnotify.h in Headers */,
+				931440EDD37BB35A3D40AB67 /* ssdpnotifyalive.h in Headers */,
+				7ED39303E3063747944950D4 /* ssdpnotifybye.h in Headers */,
+				5CA196B2704A4A003CD9C23E /* ssdpnotifyupdate.h in Headers */,
+				D022B5F207871A9BF245FD68 /* ssdpobserver.h in Headers */,
+				0C4D18FE63FEB241A6D2643A /* ssdpparser.h in Headers */,
+				4B64E81A536BA6257F794536 /* ssdpsearchreq.h in Headers */,
+				5CA0BB8A064484A63C488A1B /* ssdpsearchresp.h in Headers */,
+				272A5940B1BD9964AE03E2A6 /* ssdptools.h in Headers */,
+				A855A6472AB75AEC374D8CAD /* tools.h in Headers */,
+				4FD76E8F644BB1A76F1B9FC0 /* upnp.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0EC738876F7688A5B4BC9A67 /* Pods-upnpx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8E293C7C12399502F44FCEE /* Build configuration list for PBXNativeTarget "Pods-upnpx" */;
+			buildPhases = (
+				4C527533472B003DF4E1C347 /* Sources */,
+				FBF64442E6F7E11F52E027D5 /* Frameworks */,
+				3BFFA468BA42F737ECD04BD7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-upnpx";
+			productName = "Pods-upnpx";
+			productReference = F507BDA850AE0327A82C5A71 /* libPods-upnpx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3781662917D5F66C8FFE4315 /* Pods-AutoCoding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 322B2AFD62C92B2BDFF19834 /* Build configuration list for PBXNativeTarget "Pods-AutoCoding" */;
+			buildPhases = (
+				004B602AAF28320AA0C9614B /* Sources */,
+				ECA53F86F7AB99DDB665B5BF /* Frameworks */,
+				3AC6252647F73E2710D046AB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AutoCoding";
+			productName = "Pods-AutoCoding";
+			productReference = E2EF8835BF24B0241572C925 /* libPods-AutoCoding.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7994D91C723A185D698D8857 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 747224FEA6BF2496207149CC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				EF31D5110CA1FBBA8C626896 /* Sources */,
+				BF5D7B8D5A2BFC8E5ADBFEBB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90F04023A984151446FB4278 /* PBXTargetDependency */,
+				F063FC0A3AF93041AF091B7F /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = F72A783F224C407C77DD48D1 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4A91959E4DB8036F22BC9B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = 9385B2EF0E641FD6A84AECD5 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A3CDF406CE69B743AA61258;
+			productRefGroup = F7C9AAEF2333D8B4A1A769E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7994D91C723A185D698D8857 /* Pods */,
+				3781662917D5F66C8FFE4315 /* Pods-AutoCoding */,
+				0EC738876F7688A5B4BC9A67 /* Pods-upnpx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		004B602AAF28320AA0C9614B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4080E46D373057136459EEB /* AutoCoding.m in Sources */,
+				6484B2C4CF1DFFD8D22D80B4 /* Pods-AutoCoding-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C527533472B003DF4E1C347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6F90372D0539A4E345ACEE /* BasicDeviceParser.m in Sources */,
+				68036F1E8790D702B72EF658 /* BasicHTTPServer_ObjC.mm in Sources */,
+				7E34EB279FA22E8BAF74464D /* BasicParser.m in Sources */,
+				11CA20EDA46757E4EBF9ADA3 /* BasicParserAsset.m in Sources */,
+				D9CE78B38B9DCD87CE10C06B /* BasicServiceParser.m in Sources */,
+				6C95C8F7AF4322414DA6B454 /* BasicUPnPDevice.m in Sources */,
+				EE2FBE179C7C787847EB22F5 /* BasicUPnPService.m in Sources */,
+				2131D1B77A4767F3B3B9BB67 /* CocoaTools.m in Sources */,
+				BE0BE3079EAF8E0D8B54F27A /* DeviceFactory.m in Sources */,
+				354DE6678AEE6D2B56EDB8F6 /* LastChangeParser.m in Sources */,
+				5A4DC00EBEA4CAC25F593AF8 /* OrderedDictionary.m in Sources */,
+				8140A329313BA087D2D41C39 /* Pods-upnpx-dummy.m in Sources */,
+				2AD4AF9E2DA1F8017D86E7F6 /* SSDPDB_ObjC.mm in Sources */,
+				5A0FAB892763032079D67DAC /* SoapAction.m in Sources */,
+				522B45ED5DE41AAA6717D8B4 /* SocketServer_ObjC.mm in Sources */,
+				889E240F34A29EBFAF7B665C /* StateVariable.m in Sources */,
+				751549D37BA0EA320A2AC7CE /* StateVariableList.m in Sources */,
+				4403F8A30EE74F6FAB1018E3 /* StateVariableRange.m in Sources */,
+				B2910A5FAC6BACAEBE986E50 /* UPnPDB.m in Sources */,
+				4B73F3168A88D9C7E4AE55AF /* UPnPEventParser.m in Sources */,
+				15C4809C97C55D7EC4A32AF6 /* UPnPEvents.m in Sources */,
+				943EAC3A3846571120829137 /* UPnPManager.m in Sources */,
+				A14B033F7F144C8EC5F15540 /* basichttpserver.cpp in Sources */,
+				6AA002269F63C23555217B8C /* httpsession.cpp in Sources */,
+				7C3D01A97A330FF026159D43 /* main.mm in Sources */,
+				A5D85FE287C2F89F56363486 /* socketserver.cpp in Sources */,
+				087DF9DA904A59642FC44912 /* socketserverconnection.cpp in Sources */,
+				E4C0DA7FA60671F59826577A /* ssdp.cpp in Sources */,
+				1FC8C617C4B577483281A58A /* ssdpdb.cpp in Sources */,
+				A338F1FF21DBEEA0F451F1B0 /* ssdpdbdevice.cpp in Sources */,
+				26701A4EF32F67E72BB49597 /* ssdphttp.cpp in Sources */,
+				9CEC4BA7F50B8FC8D3384405 /* ssdpmessage.cpp in Sources */,
+				D35E0612E3D8FB9AA489B8D5 /* ssdpmsearch.cpp in Sources */,
+				927C9AC8D4E8D3A552E7B9B0 /* ssdpnotify.cpp in Sources */,
+				AAD01BD8F9E6480356577A09 /* ssdpnotifyalive.cpp in Sources */,
+				9E7171FB2E9171E452E75DA2 /* ssdpnotifybye.cpp in Sources */,
+				0FBB92ADA20A2B5548F70D71 /* ssdpnotifyupdate.cpp in Sources */,
+				4D8467911553AB91B617ACCE /* ssdpparser.cpp in Sources */,
+				1630C1655284254E72053438 /* ssdpsearchreq.cpp in Sources */,
+				093DE7BF0D59283AC3EFBA97 /* ssdpsearchresp.cpp in Sources */,
+				4525F43310D9CC4271FA3051 /* ssdptools.cpp in Sources */,
+				FA716E3DD8EF61B0D00C2B64 /* tools.cpp in Sources */,
+				BFF40142DC0F698A38CF7561 /* upnp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF31D5110CA1FBBA8C626896 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C2FFB08F4DA04B9B4155108 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90F04023A984151446FB4278 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AutoCoding";
+			target = 3781662917D5F66C8FFE4315 /* Pods-AutoCoding */;
+			targetProxy = 3A4531681C027FDD70486B3F /* PBXContainerItemProxy */;
+		};
+		F063FC0A3AF93041AF091B7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-upnpx";
+			target = 0EC738876F7688A5B4BC9A67 /* Pods-upnpx */;
+			targetProxy = E20281E8ED0A189FC92AC341 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FAEEF604A5EA961F8499297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9722421DC307C54EBDCF4208 /* Pods.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1F165D4F2F1BE360D861A2E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B30FCE82956756DB8DBC525C /* Pods-upnpx-Private.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-upnpx/Pods-upnpx-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5E94A6542AA249734440C81E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD62BDCABAA10C4B528DE7C /* Pods-AutoCoding-Private.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AutoCoding/Pods-AutoCoding-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		98F0211864793E15304325B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2162880527A3224C69996B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B30FCE82956756DB8DBC525C /* Pods-upnpx-Private.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-upnpx/Pods-upnpx-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E2613659F2DF6ECA53CF9A4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD62BDCABAA10C4B528DE7C /* Pods-AutoCoding-Private.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AutoCoding/Pods-AutoCoding-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E3695F52346C8386A29810A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D1852DDD1EB6F3239F6FFC7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F8C67A9851257431E2993082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		322B2AFD62C92B2BDFF19834 /* Build configuration list for PBXNativeTarget "Pods-AutoCoding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2613659F2DF6ECA53CF9A4F /* Debug */,
+				5E94A6542AA249734440C81E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		747224FEA6BF2496207149CC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3695F52346C8386A29810A7 /* Debug */,
+				0FAEEF604A5EA961F8499297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9385B2EF0E641FD6A84AECD5 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C67A9851257431E2993082 /* Debug */,
+				98F0211864793E15304325B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8E293C7C12399502F44FCEE /* Build configuration list for PBXNativeTarget "Pods-upnpx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2162880527A3224C69996B3 /* Debug */,
+				1F165D4F2F1BE360D861A2E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4A91959E4DB8036F22BC9B4 /* Project object */;
+}

@@ -1,0 +1,17 @@
+PODS:
+  - AutoCoding (2.2.1)
+  - upnpx (1.3.1)
+
+DEPENDENCIES:
+  - AutoCoding (~> 2.2)
+  - upnpx (from `../upnpx`)
+
+EXTERNAL SOURCES:
+  upnpx:
+    :path: ../upnpx
+
+SPEC CHECKSUMS:
+  AutoCoding: 5165b83fa6199573cc82dfb5d2cc72e11b458a1f
+  upnpx: 3dfb9b7a39177b33965fb052563b860c354b4f45
+
+COCOAPODS: 0.36.0.beta.2
