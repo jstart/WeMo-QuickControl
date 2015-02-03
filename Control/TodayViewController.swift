@@ -76,9 +76,15 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
         var cell = sender.superview!!.superview! as UITableViewCell
         var indexPath = tableView.indexPathForCell(cell)!
         let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
-        device.changeState(1)
+        device.changeState(1, {(state) in
+            self.deviceState.setObject(NSNumber(bool: state), forKey: device.uuid)
+        })
+
         device.getState({(state) in
             self.deviceState.setObject(NSNumber(bool: state), forKey: device.uuid)
+        })
+        device.getNetworkStatus({(state) in
+
         })
     }
 
@@ -86,7 +92,16 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
         var cell = sender.superview!!.superview! as UITableViewCell
         var indexPath = tableView.indexPathForCell(cell)!
         let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
-        device.changeState(0)
+        device.changeState(0, {(state) in
+            self.deviceState.setObject(NSNumber(bool: state), forKey: device.uuid)
+        })
+
+        device.getState({(state) in
+            self.deviceState.setObject(NSNumber(bool: state), forKey: device.uuid)
+        })
+        device.getNetworkStatus({(state) in
+            
+        })
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

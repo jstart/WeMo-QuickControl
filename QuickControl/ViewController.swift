@@ -64,10 +64,14 @@ class ViewController: UITableViewController, UPnPDBObserver {
         let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
 
         return [UITableViewRowAction(style: .Normal, title: "On", handler: {(action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-                device.changeState(1)
+            device.changeState(1, {(state) in
+            })
+
                 tableView.setEditing(false, animated: true)
         }), UITableViewRowAction(style: .Default, title: "Off", handler: {(action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-                device.changeState(0)
+            device.changeState(0, {(state) in
+            })
+
                 tableView.setEditing(false, animated: true)
         })]
     }
@@ -77,8 +81,8 @@ class ViewController: UITableViewController, UPnPDBObserver {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
-        device.changeState(1)
+//        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
+//        device.changeState(1)
     }
     
 }

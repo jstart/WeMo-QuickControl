@@ -1,9 +1,11 @@
 PODS:
   - AutoCoding (2.2.1)
+  - KissXML (5.0)
   - upnpx (1.3.1)
 
 DEPENDENCIES:
   - AutoCoding (~> 2.2)
+  - KissXML (~> 5.0)
   - upnpx (from `../upnpx`)
 
 EXTERNAL SOURCES:
@@ -12,6 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AutoCoding: 5165b83fa6199573cc82dfb5d2cc72e11b458a1f
+  KissXML: e537c38b18ede903ee6de45953a9bd86c131ebe9
   upnpx: 3dfb9b7a39177b33965fb052563b860c354b4f45
 
 COCOAPODS: 0.36.0.beta.2

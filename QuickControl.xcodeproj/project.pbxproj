@@ -71,6 +71,7 @@
 		AD5C90C71A0B53B400AB907F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		AD5C90C91A0B53B400AB907F /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		AD8094671A0B48EF00FE0329 /* domain.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = domain.cer; sourceTree = "<group>"; };
+		ADBF65BA1A7E0F5E00A75FF4 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		ADFFBCD21A0B558C000FA096 /* Control-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Control-Bridging-Header.h"; sourceTree = "<group>"; };
 		ADFFBCD61A0B55F5000FA096 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		E48C2AFD9A63FC3C9EA3DA10 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +110,7 @@
 		5A0F61A1F3874CF63A4EA737 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADBF65BA1A7E0F5E00A75FF4 /* libxml2.2.dylib */,
 				ADFFBCD61A0B55F5000FA096 /* libPods.a */,
 				AD5C90AD1A0B539200AB907F /* NotificationCenter.framework */,
 				E48C2AFD9A63FC3C9EA3DA10 /* libPods.a */,

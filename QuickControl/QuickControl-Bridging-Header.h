@@ -5,3 +5,4 @@
 #import <upnpx/UPnPManager.h>
 #import <upnpx/UPnPDB.h>
 #import <upnpx/OrderedDictionary.h>
+#import <upnpx/BasicUPnPService.h>
