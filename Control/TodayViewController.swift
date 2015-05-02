@@ -28,7 +28,7 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
             deviceStore.devices = savedDevicesArray
             tableView.reloadData()
         } else {
-            deviceStore.devices = db.rootDevices //BasicUPnPDevice
+            deviceStore.appendDevices(db.rootDevices as [AnyObject]);
         }
         db.addObserver(self)
         UPnPManager.GetInstance().SSDP.searchSSDP
@@ -42,7 +42,7 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
             deviceStore.devices = savedDevicesArray
             tableView.reloadData()
         } else {
-            deviceStore.devices = db.rootDevices //BasicUPnPDevice
+            deviceStore.appendDevices(db.rootDevices as [AnyObject]);
         }
         db.addObserver(self)
         UPnPManager.GetInstance().SSDP.searchSSDP
@@ -50,17 +50,16 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
     
     func UPnPDBUpdated(sender: UPnPDB!) {
         var db = UPnPManager.GetInstance().DB
-        if (db.rootDevices.count > 0){
-            deviceStore.devices = db.rootDevices
-        }
-        
-        deviceStore.saveDevices()
+
         for object in deviceStore.devices  {
             let device = object as! BasicUPnPDevice
             device.loadDeviceDescriptionFromXML
             NSLog("device name: %@", device.friendlyName);
             NSLog("device name: %@", device.baseURL!);
         }
+        deviceStore.appendDevices(db.rootDevices as [AnyObject]);
+        deviceStore.filterNonBelkin();
+        deviceStore.saveDevices()
 
         dispatch_async(dispatch_get_main_queue(), {
             self.tableView.reloadData()

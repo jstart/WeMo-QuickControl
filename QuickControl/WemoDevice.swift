@@ -56,9 +56,12 @@ extension BasicUPnPDevice : BasicUPnPServiceObserver{
                 }
                 
                 basicService.soap.action("GetBinaryState", parameters: nil, callback: {(responseDictionary : [NSObject : AnyObject]!) in
-                    var state = responseDictionary["BinaryState"] as! NSString
-                    var stateNumber = state.integerValue
-                    callback(stateNumber > 0)
+                    var state = responseDictionary["BinaryState"] as? NSString
+                    if let resolvedState = state{
+                        callback(resolvedState.integerValue > 0)
+                    }else {
+                        callback(false)
+                    }
                 });
             } else if (self.modelDescription == "Belkin WeMo Bridge for Zigbee bulbs"){
                 var basicService = self.services["urn:Belkin:service:basicevent:1"] as! BasicUPnPService
@@ -72,9 +75,12 @@ extension BasicUPnPDevice : BasicUPnPServiceObserver{
                 }
                 
                 basicService.soap.action("GetBinaryState", parameters: nil, callback: {(responseDictionary : [NSObject : AnyObject]!) in
-                    var state = responseDictionary["BinaryState"] as! NSString
-                    var stateNumber = state.integerValue
-                    callback(stateNumber > 0)
+                    var state = responseDictionary["BinaryState"] as? NSString
+                    if let resolvedState = state{
+                        callback(resolvedState.integerValue > 0)
+                    }else {
+                        callback(false)
+                    }
                 });
             }
         });
@@ -96,9 +102,12 @@ extension BasicUPnPDevice : BasicUPnPServiceObserver{
                 var results = NSMutableDictionary()
 
                 basicService.soap.action("SetBinaryState", parameters: parameters as [NSObject : AnyObject], callback: {(responseDictionary) in
-//                        var state = responseDictionary["BinaryState"] as! NSString!
-                        var stateNumber = 0 // state.integerValue
-                        callback(stateNumber > 0)
+                    var state = responseDictionary["BinaryState"] as? NSString
+                    if let resolvedState = state{
+                        callback(resolvedState.integerValue > 0)
+                    }else {
+                        callback(false)
+                    }
                 });
             } else if (self.modelDescription == "Belkin WeMo Wi-Fi to ZigBee Bridge"){
                 var bridgeService = self.services["urn:Belkin:service:bridge:1"] as! BasicUPnPService

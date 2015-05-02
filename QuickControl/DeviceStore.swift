@@ -11,7 +11,8 @@ import Foundation
 class DeviceStore {
     var devices = NSMutableArray()
     let sharedDefaults = NSUserDefaults(suiteName:"group.truman.QuickControl")!
-    
+    var deviceState = NSMutableDictionary()
+
     func appendDevices(devicesToAppend: [AnyObject]){
         if (devices.count == 0){
             devices = NSMutableArray(arrayLiteral: devicesToAppend)
@@ -19,7 +20,7 @@ class DeviceStore {
             var devicesToRemove = [BasicUPnPDevice]()
             for device in devices {
                 for otherDevice in devicesToAppend {
-                    if (device.uuid == otherDevice.udn){
+                    if (device.udn == otherDevice.udn){
                         devicesToRemove.append(device as! BasicUPnPDevice)
                     }
                 }
