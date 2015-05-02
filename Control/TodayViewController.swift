@@ -37,6 +37,7 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
         storedCompletionHandler = completionHandler
         var savedDevices = deviceStore.getDevices()
+        
         if let savedDevicesArray = savedDevices as NSMutableArray! {
             deviceStore.devices = savedDevicesArray
             tableView.reloadData()
@@ -52,13 +53,15 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
         if (db.rootDevices.count > 0){
             deviceStore.devices = db.rootDevices
         }
+        
         deviceStore.saveDevices()
         for object in deviceStore.devices  {
-            let device = object as BasicUPnPDevice
+            let device = object as! BasicUPnPDevice
             device.loadDeviceDescriptionFromXML
             NSLog("device name: %@", device.friendlyName);
             NSLog("device name: %@", device.baseURL!);
         }
+
         dispatch_async(dispatch_get_main_queue(), {
             self.tableView.reloadData()
             self.preferredContentSize = CGSizeMake(CGFloat(0), CGFloat(self.tableView(self.tableView, numberOfRowsInSection: 0)) * CGFloat(self.tableView.rowHeight))
@@ -66,17 +69,11 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
         })
     }
     
-    func saveDevices(devices : NSMutableArray){
-        var containerURL = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(groupName)
-        var fileURL = containerURL!.URLByAppendingPathComponent("Library/Caches/Devices")
-        devices.writeToFile(fileURL.absoluteString!, atomically: true)
-    }
-
     @IBAction func turnOn(sender: AnyObject) {
-        var cell = sender.superview!!.superview! as UITableViewCell
+        var cell = sender.superview!!.superview! as! UITableViewCell
         var indexPath = tableView.indexPathForCell(cell)!
-        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
-        device.changeState(1, {(state) in
+        let device = deviceStore.devices[indexPath.row] as! BasicUPnPDevice
+        device.changeState(1, callback: {(state) in
             self.deviceState.setObject(NSNumber(bool: state), forKey: device.uuid)
         })
 
@@ -89,10 +86,10 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
     }
 
     @IBAction func turnOff(sender: AnyObject) {
-        var cell = sender.superview!!.superview! as UITableViewCell
+        var cell = sender.superview!!.superview! as! UITableViewCell
         var indexPath = tableView.indexPathForCell(cell)!
-        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
-        device.changeState(0, {(state) in
+        let device = deviceStore.devices[indexPath.row] as! BasicUPnPDevice
+        device.changeState(0, callback: {(state) in
             self.deviceState.setObject(NSNumber(bool: state), forKey: device.uuid)
         })
 
@@ -113,8 +110,8 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let device = deviceStore.devices[indexPath.row] as! BasicUPnPDevice
         
         cell.textLabel!.text = device.friendlyName
         cell.detailTextLabel!.text = device.modelDescription

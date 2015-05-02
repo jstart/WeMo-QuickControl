@@ -29,10 +29,12 @@ class ViewController: UITableViewController, UPnPDBObserver {
 
     func UPnPDBUpdated(sender: UPnPDB!) {
         var db = UPnPManager.GetInstance().DB
-        deviceStore.devices = db.rootDevices
+        deviceStore.appendDevices(db.rootDevices as [AnyObject]);
+        deviceStore.filterNonBelkin();
         deviceStore.saveDevices()
+        
         for object in deviceStore.devices  {
-            let device = object as BasicUPnPDevice
+            let device = object as! BasicUPnPDevice
             device.loadDeviceDescriptionFromXML
             NSLog("device name: %@", device.friendlyName);
             NSLog("device name: %@", device.baseURL!);
@@ -51,8 +53,8 @@ class ViewController: UITableViewController, UPnPDBObserver {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)as!  UITableViewCell
+        let device = deviceStore.devices[indexPath.row] as!  BasicUPnPDevice
 
         cell.textLabel!.text = device.friendlyName
         cell.detailTextLabel!.text = device.modelDescription
@@ -61,15 +63,15 @@ class ViewController: UITableViewController, UPnPDBObserver {
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
-        let device = deviceStore.devices[indexPath.row] as BasicUPnPDevice
+        let device = deviceStore.devices[indexPath.row] as! BasicUPnPDevice
 
         return [UITableViewRowAction(style: .Normal, title: "On", handler: {(action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-            device.changeState(1, {(state) in
+            device.changeState(1, callback: {(state) in
             })
 
                 tableView.setEditing(false, animated: true)
         }), UITableViewRowAction(style: .Default, title: "Off", handler: {(action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-            device.changeState(0, {(state) in
+            device.changeState(0, callback: {(state) in
             })
 
                 tableView.setEditing(false, animated: true)
