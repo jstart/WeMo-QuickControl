@@ -68,10 +68,12 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
         })
     }
     
-    @IBAction func turnOn(sender: AnyObject) {
-        var cell = sender.superview!!.superview! as! UITableViewCell
+    @IBAction func turnOn(sender: UIButton) {
+        var cell = sender.superview!.superview! as! UITableViewCell
         var indexPath = tableView.indexPathForCell(cell)!
         let device = deviceStore.devices[indexPath.row] as! BasicUPnPDevice
+        
+
         device.changeState(1, callback: {(state) in
             self.deviceState.setObject(NSNumber(bool: state), forKey: device.uuid)
         })
@@ -84,10 +86,11 @@ class TodayViewController: UIViewController, UPnPDBObserver, NCWidgetProviding, 
         })
     }
 
-    @IBAction func turnOff(sender: AnyObject) {
-        var cell = sender.superview!!.superview! as! UITableViewCell
+    @IBAction func turnOff(sender: UIButton) {
+        var cell = sender.superview!.superview! as! UITableViewCell
         var indexPath = tableView.indexPathForCell(cell)!
         let device = deviceStore.devices[indexPath.row] as! BasicUPnPDevice
+        
         device.changeState(0, callback: {(state) in
             self.deviceState.setObject(NSNumber(bool: state), forKey: device.uuid)
         })
